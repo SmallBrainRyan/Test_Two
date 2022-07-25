@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Part_3_2 : MonoBehaviour
 {
+
+    private Transform _transform;
+    private Transform _Transform;
+
     //Attach this Script to Part_3_Cube
     void Start()
     {
@@ -13,6 +17,14 @@ public class Part_3_2 : MonoBehaviour
 
         //Using transform.Find or transform.Get get the Transform of Part_3_Cylinder which is a child of Part_3_Sphere
         //and use PrintOutNameAndPosition (1pt)
+
+        _transform = GameObject.Find("Part_3_Sphere").GetComponent<Transform>();
+        _Transform = _transform.GetChild(0).GetComponent<Transform>();
+
+        PrintOutNameAndPosition(transform.name, transform.position);
+        PrintOutNameAndPosition(_transform.name, _transform.position);
+        PrintOutNameAndPosition(_Transform.name, _Transform.position);
+
 
     }
 

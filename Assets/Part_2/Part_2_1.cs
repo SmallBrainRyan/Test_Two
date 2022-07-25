@@ -12,7 +12,17 @@ public class Part_2_1 : MonoBehaviour
         int[] array = new int[10] { 22, 58, 7, 91, 23, 354, 1, 2, 40, 12 };
         List<int> list = new List<int>();
 
-       
+        foreach (int var in array)
+        {
+            if(var%2==0 && var<30)
+            {
+                list.Add(var);
+            }
+        }
+        foreach(int final in list)
+        {
+            print(final);
+        }
     }
 
 }
